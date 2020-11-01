@@ -1,10 +1,10 @@
 <div class="main-frame">
   <div *ngFor = "let raceClass of allRacers; let i = index" class="race-class">
-    <mat-accordion class="example-headers-align" multi>
-      <mat-expansion-panel>
+    <mat-accordion>
+      <mat-expansion-panel class="top-cards" (opened) = "admin.checked = false">
         <mat-expansion-panel-header>
           <mat-panel-title>
-            Class {{raceClass.group}}
+            <span class="name-of-class">Class {{raceClass.group}}</span>
           </mat-panel-title>
           <mat-panel-description class="description">
           </mat-panel-description>
@@ -14,9 +14,10 @@
     </mat-accordion>
   </div>
 
-  <mat-slide-toggle #admin class="admin-toggle">
+  <mat-slide-toggle #admin class="admin-toggle" (checked) = "accordion.closeAll()">
         Admin Mode
   </mat-slide-toggle>
 
 <button (click)="NextRace()" class="nextRaceBtn" id="nextRace" *ngIf ="admin.checked" mat-flat-button color="primary">Next Race</button>
+<button (click)="ResetRace()" class="nextRaceBtn" id="nextRace" *ngIf ="admin.checked" mat-flat-button color="warn">Reset</button>
 </div>

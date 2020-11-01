@@ -3,6 +3,11 @@
     margin-top: 5px;
 }
 
+.name-of-class {
+    font-size: 40px;
+    font-style: italic;
+}
+
 .race-class:nth-child(1) {
     border: 1px solid red;
     font-weight: bold;
@@ -31,4 +36,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.top-cards{
+    box-shadow: 2px, 2px;
 }
