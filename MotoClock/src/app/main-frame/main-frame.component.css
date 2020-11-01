@@ -1,0 +1,34 @@
+.race-class {
+    width: 100%;
+    margin-top: 5px;
+}
+
+.race-class:nth-child(1) {
+    border: 1px solid red;
+    font-weight: bold;
+}
+.race-class:nth-child(2) {
+    border: 1px solid yellow;
+}
+
+.description {
+    text-align: center;
+    margin-top: 1em;
+}
+
+.admin-toggle {
+    margin-top: 10px;
+}
+
+.nextRaceBtn{
+    width: 33%;
+    justify-self: flex-end;
+    margin-top: 50px;
+    justify-self: flex-start;
+}
+
+.main-frame {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

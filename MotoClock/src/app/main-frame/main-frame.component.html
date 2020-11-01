@@ -1,1 +1,22 @@
-<p>main-frame works!</p>
+<div class="main-frame">
+  <div *ngFor = "let raceClass of allRacers; let i = index" class="race-class">
+    <mat-accordion class="example-headers-align" multi>
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            Class {{raceClass.group}}
+          </mat-panel-title>
+          <mat-panel-description class="description">
+          </mat-panel-description>
+        </mat-expansion-panel-header>
+        <p *ngFor = "let racer of raceClass.racers; let j = index">{{j+1}}.)   {{racer}}</p>
+      </mat-expansion-panel>
+    </mat-accordion>
+  </div>
+
+  <mat-slide-toggle #admin class="admin-toggle">
+        Admin Mode
+  </mat-slide-toggle>
+
+<button (click)="NextRace()" class="nextRaceBtn" id="nextRace" *ngIf ="admin.checked" mat-flat-button color="primary">Next Race</button>
+</div>

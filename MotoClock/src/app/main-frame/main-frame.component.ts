@@ -7,7 +7,38 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MainFrameComponent implements OnInit {
 
-  constructor() { }
+    aRacers = ["Tyler B", "James B", "Chris W", "Alex S"]
+    bRacers = ["Tyler C", "Greg K", "John H", "Paul S"]
+    cRacers = ["Rick A", "Jack S", "David L", "Harold D"]
+    dRacers = ["Tyler C", "Greg K", "John H", "Paul S"]
+
+    allRacers = [
+      {
+        group: "A",
+        racers: this.aRacers
+      },
+      {
+        group: "B",
+        racers: this.bRacers
+      },
+      {
+        group: "C",
+        racers: this.cRacers
+
+      },
+      {
+        group: "D",
+        racers: this.dRacers
+      }
+    ]
+
+
+  constructor() {
+   }
+
+   NextRace () {
+     this.allRacers.push(this.allRacers.splice(0,1)[0]);
+   }
 
   ngOnInit() {
   }
