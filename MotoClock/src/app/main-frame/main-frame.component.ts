@@ -40,6 +40,28 @@ export class MainFrameComponent implements OnInit {
      this.allRacers.push(this.allRacers.splice(0,1)[0]);
    }
 
+   ResetRace () {
+     this.allRacers = [
+      {
+        group: "A",
+        racers: this.aRacers
+      },
+      {
+        group: "B",
+        racers: this.bRacers
+      },
+      {
+        group: "C",
+        racers: this.cRacers
+
+      },
+      {
+        group: "D",
+        racers: this.dRacers
+      }
+    ]
+   }
+
   ngOnInit() {
   }
 
